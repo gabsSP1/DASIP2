@@ -1,17 +1,52 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Collect'IF - Liste des Activités</title>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width">
+        <script src="http://code.jquery.com/jquery-1.12.1.min.js"></script>
     </head>
     <body>
-        <div>Listes des activités : </div>
-        
+        <h1>Collect'IF &ndash; Liste des Activités</h1>
+        <div id='listeActivites'>
+            <span>chargement en cours...</span>
+        </div>
+
+
+        <script>
+
+            $(function() {
+
+                $.ajax({
+                    url: './Controleur',
+                    type: 'POST',
+                    data: {
+                        action: 'listeActivite',
+                    },
+                    dataType: 'json'
+                })
+                .done(function(data) {
+                    console.log("inDone")
+                    var activites = data.activites;
+                    var contenuHtml = '<ul>';
+                    var i;
+                    for (i = 0; i < activites.length; i++) {
+                        contenuHtml += '<li>' + activites[i].nom + '</li>';
+                    }
+                    contenuHtml += '</ul>';
+                    $('#listeActivites').html(contenuHtml);
+
+
+                })
+                .fail(function() {
+                    $('#listeActivites').html('ERREUR de chargement');
+                })
+                .always(function() {
+                    //
+                });
+
+            });
+
+        </script>
     </body>
 </html>
