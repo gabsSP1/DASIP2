@@ -9,9 +9,23 @@ and open the template in the editor.
         <title>Connexion</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style>
+			
+			.mainDiv{
+				position : relative;
+				left : 25%;
+				border : 2px solid black;
+				width : 50%;
+			}
+		</style>
     </head>
     <body>
         <a href="./index.html">&lt Retour </a>
-        <div>TODO write content</div>
+        <div id="divDeConnexion" style="text-align:center;" class="mainDiv">
+			<h1> Connexion </h1>
+			<div id="divEmail" style="padding:1%; padding-top:5%;"> E-mail <input type="text" id="inputEmail" value="xxxx@smthing.com" >  </input> </div>
+			<div id="divPassword" style="padding:1%;"> Mot de passe <input type="password" id="inputPassword" >  </input> </div>
+			<button id="btnValidation"style="margin:2%; margin-bottom:5%;"> &gt;Connexion </button>
+		</div>
     </body>
 </html>

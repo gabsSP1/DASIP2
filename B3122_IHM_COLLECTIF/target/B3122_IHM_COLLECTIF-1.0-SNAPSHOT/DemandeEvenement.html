@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Demande d'evenement </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style>
+			
+			.mainDiv{
+				position : relative;
+				left : 25%;
+				border : 2px solid black;
+				width : 50%;
+			}
+		</style>
+    </head>
+	<body>
+		<div> <a href="./Accueil.html"> &lt; accueil </a> <a href="./index.html" style="text-align:right;float:right;">&gt; déconnexion </a> </div>
+		<div id="divAccueil" style="text-align:center;" class="mainDiv">
+			<h1> Demande d'événement </h1>
+			<div>
+				<button style="display:inline-block; height:40%; font-size:18px;" id="btnPagePrec"> &lt; </button>
+				<div style="display:inline-block; height:50%; width:50%; border: 2px solid black;" id="divEvents"> </div>
+				<button style="display:inline-block; height:40%; font-size:18px;" id="btnPageSuiv"> &gt; </button>
+				<div> Date de l'evenement <input type="text" id="inputDateText"/> <!-- replace with Jquery UI datepicker --> </div>
+				<button style="margin-bottom:3%;" id="btnValidation"> Valider </button>
+			</div>
+		</div>
+	</body>
+</html>
