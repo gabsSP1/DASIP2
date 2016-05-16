@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title> Gestion Collect'IF </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style>
+			
+			.mainDiv{
+				position : relative;
+				left : 25%;
+				border : 2px solid black;
+				width : 50%;
+			}
+			tr{
+				border: 1px solid black;
+			}
+			td {
+				border-right: 1px solid black;
+			}
+		</style>
+    </head>
+	<body>
+	<div> <a href="./Accueil.html"> &lt; accueil </a> <a href="./index.html" style="text-align:right;float:right;">&gt; déconnexion </a> </div>
+		<div id="divAccueil" style="text-align:center;" class="mainDiv">
+			<h1> Liste des Evenements</h1>
+			<div>
+				<button style="display:inline-block; height:40%; font-size:18px;" id="btnPagePrec"> &lt; </button>
+				<div style="display:inline-block; height:50%; width:50%; border: 2px solid black;" id="divEvents">
+					<table>
+						<tr> <td>Activité</td> <td>Date</td> <td>Lieu</td> <td>Action</td> </tr>
+					</table>
+				</div>
+				<button style="display:inline-block; height:40%; font-size:18px;" id="btnPageSuiv"> &gt; </button>
+			</div>
+			<p id="page"> Page </p>
+			
+			
+			
+		</div>
+	</body>
+</html>
